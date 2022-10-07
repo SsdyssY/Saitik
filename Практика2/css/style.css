@@ -11,15 +11,12 @@ box-sizing: border-box;
 --transition: 1.25s cubic-bezier(.2, .5, 0, 1);;
 }
 @font-face{
-	font-family: "arsenal_f";
-	src: url("fonts/ar.woff2");
+	font-family: arsenal_f;
+	src: url(../fonts/ar.woff2);
 }
-body {
-	background-color: white;
-   }
 .magic-list {
 font-family: arsenal_f, sans-serif;
-padding: 10px;
+padding: calc(var(--i) * 2);
 font-size: calc(var(--S) * 3);
 font-size: calc(var(--S) * 3)
 }
@@ -36,7 +33,8 @@ font-size: calc(var(--S) * 3)
 border-top: 1.5px solid var(--P);
 }
 .magic-list_header{
-width: min-content; 
+transition: transform var(--transition);
+	will-change: transform; 
 
 }
 .magic-list_item::before{
